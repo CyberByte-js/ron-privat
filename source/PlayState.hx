@@ -761,12 +761,12 @@ class PlayState extends MusicBeatState
 				defaultCamZoom = 0.9;
 				curStage = 'glitch';
 				var bg:FlxSprite = new FlxSprite(300, 200).loadGraphic(Paths.image('ron/bg/png'));
-				bg.setGraphicSize(Std.int(bg.width * 5));
-				bg.setGraphicSize(Std.int(bg.height * 5));
-				bg.antialiasing = true;
-				bg.scrollFactor.set(0.9, 0.9);
-				bg.active = false;
-				add(bg);
+					bg.setGraphicSize(Std.int(bg.width * 2));
+					bg.setGraphicSize(Std.int(bg.height * 2));
+					bg.antialiasing = true;
+					bg.scrollFactor.set(0.9, 0.9);
+					bg.active = false;
+					add(bg);
 			case 'baka':
 				{
 					defaultCamZoom = 0.9;
