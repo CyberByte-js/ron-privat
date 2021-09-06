@@ -37,7 +37,7 @@ function stepHit(step)
         funnywindow = false
         funnywindowsmall = true
     end
-    if curStep == 1546 then
+    if curStep == 1545 then
         funnywindowsmall = false
         funnywindow = true
     end
