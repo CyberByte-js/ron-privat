@@ -32,6 +32,7 @@ import Discord.DiscordClient;
 #end
 //yo cyber should i add anti piracy? -ekical
 //like a real anti piracy thing or just a joke? -cyber
+//idk do you want it to be real or a joke? -ekical
 #if cpp
 import sys.thread.Thread;
 #end
