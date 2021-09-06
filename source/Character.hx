@@ -709,6 +709,22 @@ class Character extends FlxSprite
 				addOffset("singRIGHT", -89, -51);
 				addOffset("singDOWN", 40, -120);
 				addOffset("Ugh", 71, -40);
+			case 'ronsip':
+				frames = Paths.getSparrowAtlas('ron/characters/kill_yourself', 'shared');
+				animation.addByPrefix('idle', 'RON_IDLE', 24, false);
+				animation.addByPrefix('singUP', 'RON_UP', 24, false);
+				animation.addByPrefix('singDOWN', 'RON_DOWN', 24, false);
+				animation.addByPrefix('singLEFT', 'RON_LEFT', 24, false);
+				animation.addByPrefix('singRIGHT', 'RON_RIGHT', 24, false);
+
+				// addOffset("singDOWN", 160 -180);
+				animOffsets['singDOWN'] = [160, -180];
+				addOffset('idle');
+				addOffset("singUP", -20, -50);
+				addOffset("singRIGHT", -30, -50);
+				addOffset("singLEFT", 600, 220);
+
+				playAnim('idle');
 		}
 
 		dance();
