@@ -27,6 +27,7 @@ using StringTools;
 // ok so we probably need a custom bg for it right? its probably the start -cyber
 // yeah yeah, who should we get to make it tho? -ekical
 // just ping @artists -cyber
+// k -ekical
 class MainMenuState extends MusicBeatState
 {
 	var curSelected:Int = 0;
