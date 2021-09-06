@@ -10,14 +10,14 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.app.Application;
 
-class OutdatedSubState extends MusicBeatState
+class WarningSubState extends MusicBeatState
 {
 	public static var leftState:Bool = false;
-
+	
 	override function create()
 	{
 		super.create();
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('week54prototype', 'shared'));
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('ron/misc/warning', 'shared'));
 		bg.scale.x *= 1.55;
 		bg.scale.y *= 1.55;
 		bg.screenCenter();
@@ -29,12 +29,12 @@ class OutdatedSubState extends MusicBeatState
 		if (controls.ACCEPT)
 		{
 			leftState = true;
-			FlxG.switchState(new WarningSubState());
+			FlxG.switchState(new MainMenuState());
 		}
 		if (controls.BACK)
 		{
 			leftState = true;
-			FlxG.switchState(new WarningSubState());
+			FlxG.switchState(new MainMenuState());
 		}
 		super.update(elapsed);
 	}
