@@ -34,6 +34,7 @@ import Discord.DiscordClient;
 //like a real anti piracy thing or just a joke? -cyber
 //idk do you want it to be real or a joke? -ekical
 //do it if you want lol gtg bye -cyber
+//lol k -ekical
 #if cpp
 import sys.thread.Thread;
 #end
@@ -345,6 +346,14 @@ class TitleState extends MusicBeatState
 		}
 
 		super.update(elapsed);
+	}
+
+	function fuckyou(){
+		#if desktop
+		 FlxG.switchState(new MainMenuState());
+		#else
+		 FlxG.switchState(new Piracy());
+		#end
 	}
 
 	function createCoolText(textArray:Array<String>)
