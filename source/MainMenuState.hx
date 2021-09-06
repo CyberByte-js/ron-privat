@@ -21,7 +21,7 @@ import Discord.DiscordClient;
 #end
 
 using StringTools;
-// your mother
+// cyber can we try to make the main menu better plz
 class MainMenuState extends MusicBeatState
 {
 	var curSelected:Int = 0;
