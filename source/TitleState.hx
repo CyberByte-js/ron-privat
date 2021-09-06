@@ -31,6 +31,7 @@ import openfl.Assets;
 import Discord.DiscordClient;
 #end
 //yo cyber should i add anti piracy? -ekical
+//like a real anti piracy thing or just a joke? -cyber
 #if cpp
 import sys.thread.Thread;
 #end
