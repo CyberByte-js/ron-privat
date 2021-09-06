@@ -783,9 +783,9 @@ class PlayState extends MusicBeatState
 				{
 					defaultCamZoom = 0.9;
 					curStage = 'win';
-					var bg:FlxSprite = new FlxSprite(300, 200).loadGraphic(Paths.image('ron/bg/bg'));
-					bg.setGraphicSize(Std.int(bg.width * 4));
-					bg.setGraphicSize(Std.int(bg.height * 4));
+					var bg:FlxSprite = new FlxSprite(-100, 0).loadGraphic(Paths.image('ron/bg/bg'));
+					bg.setGraphicSize(Std.int(bg.width * 1));
+					bg.setGraphicSize(Std.int(bg.height * 1));
 					bg.antialiasing = true;
 					bg.scrollFactor.set(0.9, 0.9);
 					bg.active = false;
@@ -1403,6 +1403,23 @@ class PlayState extends MusicBeatState
 					});
 					FlxG.sound.play(Paths.sound('introGo' + altSuffix), 0.6);
 				case 4:
+					if (curSong == "Trojan-Virus")
+						{
+						var bruh:FlxSprite = new FlxSprite();
+						bruh.loadGraphic(Paths.image('ron/longbob'));
+						bruh.antialiasing = true;
+						bruh.active = false;
+						bruh.scrollFactor.set();
+						bruh.screenCenter();
+						add(bruh);
+						FlxTween.tween(bruh, {alpha: 0}, 1, {
+							ease: FlxEase.cubeInOut,
+							onComplete: function(twn:FlxTween)
+							{
+								bruh.destroy();
+							}
+				});
+						}
 			}
 
 			swagCounter += 1;
