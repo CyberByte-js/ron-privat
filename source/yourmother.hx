@@ -13,7 +13,7 @@ class PiracyScreen extends MusicBeatState
 	{
 		super.create();
 		
-		var screen:FlxSprite = new FlxSprite().loadGraphic(Paths.image("yourmother"));
+		var screen:FlxSprite = new FlxSprite().loadGraphic(Paths.image("unpog"));
 		
 		add(screen);
 		
@@ -26,7 +26,7 @@ class PiracyScreen extends MusicBeatState
 		super.update(elapsed);
 		
 		if (controls.ACCEPT){
-			FlxG.switchState(new Piracy());
+			FlxG.switchState(new RoinAgainstPiracy());
 		}
 		
 		

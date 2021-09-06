@@ -352,7 +352,7 @@ class TitleState extends MusicBeatState
 		#if desktop
 		 FlxG.switchState(new MainMenuState());
 		#else
-		 FlxG.switchState(new Piracy());
+		 FlxG.switchState(new RoinAgainstPiracy());
 		#end
 	}
 
