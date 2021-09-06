@@ -25,6 +25,7 @@ using StringTools;
 // yea but how? -cyber
 // idk we'll make it up as we go -ekical
 // ok so we probably need a custom bg for it right? its probably the start -cyber
+// yeah yeah, who should we get to make it tho? -ekical
 class MainMenuState extends MusicBeatState
 {
 	var curSelected:Int = 0;
