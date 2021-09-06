@@ -38,17 +38,17 @@ class HealthIcon extends FlxSprite
 		animation.add('monster', [19, 20], 0, false, isPlayer);
 		animation.add('monster-christmas', [19, 20], 0, false, isPlayer);
 		// organized ron health icons because cyber didnt
+		// also cyber plz add the other health icons ok ty
 		animation.add('ron', [24, 25], 0, false, isPlayer);
-		animation.add('ronb', [24, 25], 0, false, isPlayer);
-		animation.add('ron-mad', [26, 27], 0, false, isPlayer);
-		animation.add('ronmad-b', [26, 27], 0, false, isPlayer);
-		animation.add('hellron', [28, 29], 0, false, isPlayer);
-		animation.add('susron', [28, 29], 0, false, isPlayer);
+		animation.add('ron-mad', [26, 27], 0, false, isPlayer);		
+		animation.add('hellron', [28, 29], 0, false, isPlayer);		
 		animation.add('ateloron', [28, 29], 0, false, isPlayer);
-		animation.add('ron-usb', [30, 31], 0, false, isPlayer);
-		animation.add('ron-usb-b', [30, 31], 0, false, isPlayer);
+		animation.add('ron-usb', [30, 31], 0, false, isPlayer);		
 		animation.add('factorytankman', [30, 31], 0, false, isPlayer);
-		animation.add('midcorrupt', [32, 33], 0, false, isPlayer);
+		animation.add('ronb', [34, 35], 0, false, isPlayer);
+		animation.add('ronmad-b', [36, 37], 0, false, isPlayer);
+		animation.add('hellron-b', [38, 39], 0, false, isPlayer);	
+		animation.add('ron-usb-b', [40, 41], 0, false, isPlayer);
 		animation.play(char);
 
 		switch(char)
