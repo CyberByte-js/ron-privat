@@ -40,6 +40,7 @@ class HealthIcon extends FlxSprite
 		// organized ron health icons because cyber didnt
 		// also cyber plz add the other health icons ok ty
 		// ok
+		// ty :)
 		animation.add('ron', [24, 25], 0, false, isPlayer);
 		animation.add('ron-mad', [26, 27], 0, false, isPlayer);		
 		animation.add('hellron', [28, 29], 0, false, isPlayer);		
