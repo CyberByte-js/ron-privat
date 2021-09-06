@@ -35,6 +35,7 @@ import Discord.DiscordClient;
 //idk do you want it to be real or a joke? -ekical
 //do it if you want lol gtg bye -cyber
 //lol k -ekical
+//also im leaving these little comment conversatiions here because i think it funny lol -ekical
 #if cpp
 import sys.thread.Thread;
 #end
