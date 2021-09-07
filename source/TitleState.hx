@@ -405,7 +405,7 @@ class TitleState extends MusicBeatState
 		override function beatHit()
 		{
 			super.beatHit();
-	
+			//bumpin camera :)
 			FlxTween.tween(FlxG.camera, {zoom:1.025}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD});
 			logoBl.animation.play('bump',true);
 			FlxG.log.add(curBeat);
