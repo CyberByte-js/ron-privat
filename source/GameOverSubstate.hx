@@ -29,7 +29,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		switch (daStage)
 		{
-			case 'baka' && 'hell':
+			case 'baka':
 				FlxG.openURL("https://sites.google.com/view/robgivesyourobuc/home");
 		}
 		
