@@ -387,19 +387,28 @@ class TitleState extends MusicBeatState
 		}
 	}
 
-	override function beatHit()
-	{
-		super.beatHit();
-
-		logoBl.animation.play('bump');
-		danceLeft = !danceLeft;
-
-		if (danceLeft)
-			gfDance.animation.play('danceRight');
-		else
-			gfDance.animation.play('danceLeft');
-
-		FlxG.log.add(curBeat);
+	override public function stepHit():Void 
+		{
+			super.stepHit();
+			if (curStep % 2 == 0){
+				
+			danceLeft = !danceLeft;
+	
+			if (danceLeft)
+				gfDance.animation.play('danceRight');
+			else
+				gfDance.animation.play('danceLeft');
+	
+			}
+		}
+		
+		override function beatHit()
+		{
+			super.beatHit();
+	
+			FlxTween.tween(FlxG.camera, {zoom:1.025}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD});
+			logoBl.animation.play('bump',true);
+			FlxG.log.add(curBeat);
 
 		switch (curBeat)
 		{
