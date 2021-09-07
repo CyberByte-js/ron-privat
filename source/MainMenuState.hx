@@ -35,7 +35,7 @@ class MainMenuState extends MusicBeatState
 	var menuItems:FlxTypedGroup<FlxSprite>;
 
 	#if !switch
-	var optionShit:Array<String> = ['story mode', 'b-side', 'freeplay', 'options'];
+	var optionShit:Array<String> = ['story mode', 'b-side', 'freeplay', 'options', 'credits'];
 	#else
 	var optionShit:Array<String> = ['story mode', 'freeplay'];
 	#end
@@ -270,6 +270,8 @@ class MainMenuState extends MusicBeatState
 			case 'b-side':
 				FlxG.switchState(new BSIDEState());
 				trace("b");
+			case 'credits':
+				FlxG.switchState(new CreditsState());
 		}
 	}
 
