@@ -40,13 +40,7 @@ class CreditsState extends MusicBeatState
 			songs.push(new Modders(data[0], data[1]));
 		}
 
-		/* 
-			if (FlxG.sound.music != null)
-			{
-				if (!FlxG.sound.music.playing)
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
-			}
-		 */
+        FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
 		 #if windows
 		 // Updating Discord Rich Presence
@@ -207,10 +201,6 @@ class CreditsState extends MusicBeatState
 		
 		// adjusting the highscore song name to be compatible (changeSelection)
 		// would read original scores if we didn't change packages
-
-		#if PRELOAD_ALL
-		FlxG.sound.playMusic(Paths.inst(songs[curSelected].songName), 0);
-		#end
 
 		var bullShit:Int = 0;
 
