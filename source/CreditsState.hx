@@ -181,64 +181,44 @@ class CreditsState extends MusicBeatState
             {
                 case 0:
                     FlxG.openURL("https://gamebanana.com/members/1846650");
-					Sys.exit(0);
                 case 1:
                     FlxG.openURL("https://gamebanana.com/members/1782968");
-					Sys.exit(0);
 				case 2:
 					FlxG.openURL("https://gamebanana.com/members/1714082");
-					Sys.exit(0);
 				case 3:
 					FlxG.openURL("https://clips.twitch.tv/CuriousBrainyFriseePogChamp-3GIEA2MKSohYB8VW");
-					Sys.exit(0);
 				case 4:
 					FlxG.openURL("https://gamebanana.com/members/1797091");
-					Sys.exit(0);
 				case 5:
 					FlxG.openURL("https://gamebanana.com/members/1878606");
-					Sys.exit(0);
 				case 6:
 					FlxG.openURL("https://gamejolt.com/@Ekical");
-					Sys.exit(0);
 				case 7:
 					FlxG.openURL("https://gamebanana.com/members/1966530");
-					Sys.exit(0);
 				case 8:
 					FlxG.openURL("https://gamebanana.com/members/1944819");
-					Sys.exit(0);
 				case 9:
 					FlxG.openURL("https://www.youtube.com/channel/UC-jtjO3youJyDbpH67uDn_g");
-					Sys.exit(0);
 				case 10:
 					FlxG.openURL("https://gamebanana.com/members/1864849");
-					Sys.exit(0);
 				case 11:
 					FlxG.openURL("https://gamejolt.com/@firey7k");
-					Sys.exit(0);
 				case 12:
 					FlxG.openURL("https://gamebanana.com/members/1916432");
-					Sys.exit(0);
 				case 13:
 					FlxG.openURL("https://www.youtube.com/channel/UCLATrFLIwMFqvWLDKJ3GXjw");
-					Sys.exit(0);
 				case 14:
 					FlxG.openURL("https://gamebanana.com/members/1800032");
-					Sys.exit(0);
 				case 15:
 					FlxG.openURL("https://gamebanana.com/members/1663640");
-					Sys.exit(0);
 				case 16:
 					FlxG.openURL("https://gamebanana.com/members/1934701");
-					Sys.exit(0);
 				case 17:
 					FlxG.openURL("https://gamebanana.com/members/1775077");
-					Sys.exit(0);
 				case 18:
 					FlxG.openURL("https://gamebanana.com/members/1774971");
-					Sys.exit(0);
 				case 19:
 					FlxG.openURL("https://gamebanana.com/members/1805202");
-					Sys.exit(0);
             }
 		}
 	}
