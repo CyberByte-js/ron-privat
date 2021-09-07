@@ -1,5 +1,6 @@
 local funnywindow = false
 local funnywindowsmall = false
+local NOMOREFUNNY = false
 
 function setDefault(id)
     _G['defaultStrum'..id..'X'] = getActorX(id)
@@ -23,22 +24,30 @@ function update (elapsed)
     if funnywindowsmall then
         setWindowPos(8 * math.sin(currentBeat * math.pi) + 327, 4 * math.sin(currentBeat * 3) + 160)
     end
+    if NOMOREFUNNY then
+        setWindowPos(0 * math.sin(currentBeat * math.pi) + 327, 0 * math.sin(currentBeat * 3) + 160)
+    end
 end
-
+-- fixed the step they start at BECAUSE CYBER'S A IDIOT AND OFFSET ALL OF THEM
 function stepHit(step)
-    if curStep == 256 then
+    if curStep == 129 then
         funnywindowsmall = true
     end
-    if curStep == 511 then
+    if curStep == 258 then
         funnywindowsmall = false
         funnywindow = true
     end
-    if curStep == 1024 then
+    if curStep == 518 then
         funnywindow = false
         funnywindowsmall = true
     end
-    if curStep == 1545 then
+    if curStep == 776 then
         funnywindowsmall = false
         funnywindow = true
+    end
+    if curStep == 1053 then
+        NOMOREFUNNY = true
+        funnywindow = false
+        funnywindowsmall = false
     end
 end
