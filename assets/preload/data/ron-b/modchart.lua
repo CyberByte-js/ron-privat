@@ -21,4 +21,8 @@ function stepHit(step)
         tweenCamZoom(2,0.2)
         setHudPosition(0,0)
     end
+    if curStep >= 861 and curStep < 864 then
+        setCamZoom(0.2)
+        tweenCamZoom(2,0.2)
+    end
 end
