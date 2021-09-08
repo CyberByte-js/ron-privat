@@ -2609,6 +2609,12 @@ class PlayState extends MusicBeatState
 							case 0:
 								dad.playAnim('singLEFT' + altAnim, true);
 						}
+						//shakes the fuck out of your screen and hud -ekical
+						if (dad.curCharacter == 'hellron')
+							{
+								FlxG.camera.shake(0.025, 0.1);
+								camHUD.shake(0.0055, 0.15);
+							}
 						
 						if (FlxG.save.data.cpuStrums)
 						{
