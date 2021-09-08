@@ -3,9 +3,9 @@ Ron:ron:1
 Ayo:ron-mad:1
 Bloodshed:hellron:1
 Bloodshed-old:hellron:1
-Ron-b:ron:1
-Ayo-b:ron-mad:1
-Bloodshed-b:hellron:1
+Ron-b:ronb:1
+Ayo-b:ron-mad-b:1
+Bloodshed-b:hellron-b:1
 Trojan-Virus:ron-usb:2
 File-Manipulation:ron-usb:2
 Atelophobia:ateloron:2
