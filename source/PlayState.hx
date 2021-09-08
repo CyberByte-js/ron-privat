@@ -276,10 +276,6 @@ class PlayState extends MusicBeatState
 
 		// pre lowercasing the song name (create)
 		var songLowercase = StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase();
-		switch (songLowercase) {
-			case 'dad-battle': songLowercase = 'dadbattle';
-			case 'philly-nice': songLowercase = 'philly';
-		}
 		
 		removedVideo = false;
 
@@ -303,12 +299,7 @@ class PlayState extends MusicBeatState
 		// To avoid having duplicate images in Discord assets
 		switch (iconRPC)
 		{
-			case 'senpai-angry':
-				iconRPC = 'senpai';
-			case 'monster-christmas':
-				iconRPC = 'monster';
-			case 'mom-car':
-				iconRPC = 'mom';
+
 		}
 
 		// String that contains the mode defined here so it isn't necessary to call changePresence for each mode
@@ -4114,6 +4105,22 @@ class PlayState extends MusicBeatState
 					FlxG.camera.follow(camFollow, LOCKON, 0.04 * (30 / (cast (Lib.current.getChildAt(0), Main)).getFPS()));
 				}
 			}
+		if (curSong == 'ron-b')
+		{
+			if (curBeat == 7)
+			{
+				dad.playAnim('cheer', true);
+			} else if (curBeat == 19)
+			{
+				dad.playAnim('cheer', true);
+			} else if (curBeat == 119)
+			{
+				dad.playAnim('cheer', true);
+			} else if (curBeat == 215)
+			{
+				dad.playAnim('cheer', true);
+			}
+		}
 	}
 	function  checkCodeInput()
 		{
