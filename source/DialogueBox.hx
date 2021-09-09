@@ -44,12 +44,16 @@ class DialogueBox extends FlxSpriteGroup
 	{
 		super();
 
-		switch (PlayState.SONG.song.toLowerCase())
+		if (PlayState.SONG.song.toLowerCase() == 'bloodshed' ||PlayState.SONG.song.toLowerCase() == 'bloodshed-b')
 		{
-			case 'bloodshed':
-				FlxG.sound.playMusic(Paths.music('bloodshed-dialogue-mus'), 0);
+			FlxG.sound.playMusic(Paths.music('bloodshed-dialogue-mus'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
+		} else
+		{
+			FlxG.sound.playMusic(Paths.music('talking-in-a-cool-way'), 0);
+			FlxG.sound.music.fadeIn(1, 0, 0.8);
 		}
+				
 
 		bgFade = new FlxSprite(-200, -200).makeGraphic(Std.int(FlxG.width * 1.3), Std.int(FlxG.height * 1.3), 0xFFB3DFd8);
 		bgFade.scrollFactor.set();
