@@ -388,11 +388,13 @@ class PlayState extends MusicBeatState
 			case 'trojan-virus':
 				{					
 					dialogue = [
-						":dad:I will commit genocide on the entire human race if you dont give up rn",
-						":dad:Like deadass Ill kill all of " + user + "s family",
-						":bf:wait you cant break the fourth wall thats illegal",
-						":dad:you just did criminal",
-						":bf:FUCK",
+						":dad: I will commit genocide on the entire human race if you don’t give up rn",
+						":dad: Like deadass I’ll kill all of " + user + "'s family",
+						":bf: who is that",
+						":dad: what",
+						":bf: i do not know that person",
+						":dad: mmhwhatever just know that im going to kill you",
+						":bf: guh??",
 						];
 				}
 		}
