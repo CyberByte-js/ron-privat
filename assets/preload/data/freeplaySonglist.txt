@@ -4,7 +4,7 @@ Ayo:ron-mad:1
 Bloodshed:hellron:1
 Bloodshed-old:hellron:1
 Ron-b:ronb:1
-Ayo-b:ron-mad-b:1
+Ayo-b:ronmad-b:1
 Bloodshed-b:hellron-b:1
 Trojan-Virus:ron-usb:2
 File-Manipulation:ron-usb:2
