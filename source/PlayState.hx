@@ -1396,7 +1396,7 @@ class PlayState extends MusicBeatState
 					});
 					FlxG.sound.play(Paths.sound('introGo' + altSuffix), 0.6);
 				case 4:
-					if (curSong == "Trojan-Virus")
+					if (curSong == "Trojan Virus")
 						{
 						var bruh:FlxSprite = new FlxSprite();
 						bruh.loadGraphic(Paths.image('ron/longbob'));
