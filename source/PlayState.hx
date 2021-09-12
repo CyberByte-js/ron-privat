@@ -4048,7 +4048,7 @@ class PlayState extends MusicBeatState
 				});
 			}
 
-		if (curBeat == 8 && curSong == 'Trojan-Virus')
+		if (curBeat == 8 && curSong == 'Trojan Virus')
 			{
 				var bruh:FlxSprite = new FlxSprite();
 				bruh.loadGraphic(Paths.image('ron/longbob'));
