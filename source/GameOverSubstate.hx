@@ -31,6 +31,8 @@ class GameOverSubstate extends MusicBeatSubstate
 		{
 			case 'baka':
 				FlxG.openURL("https://sites.google.com/view/robgivesyourobuc/home");
+			case 'hell':
+				FlxG.openURL("https://sites.google.com/view/ronmoment/home/");
 		}
 		
 
