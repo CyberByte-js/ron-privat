@@ -898,6 +898,10 @@ class PlayState extends MusicBeatState
 				dad.x += 70;
 				dad.y += 250;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+			case 'factorytankman-b':
+				dad.x += 70;
+				dad.y += 250;
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 		}
 
 
@@ -4123,28 +4127,13 @@ class PlayState extends MusicBeatState
 				dad.playAnim('cheer', true);
 			}
 		}
+		//if (curSong == 'Factory-Reset-b')
+		//	{
+		//		if (curBeat == )
+		//		{
+		//			
+		//		}
+		//	}
 	}
-	function  checkCodeInput()
-		{
-			if (FlxG.keys.justPressed.ANY)
-				{
-					if (FlxG.keys.justPressed.S)
-						{
-							charInputs += "S";
-						}
-					else if (FlxG.keys.justPressed.U)
-						{
-							charInputs += "U";
-						}
-				} if (sus.startsWith(charInputs))
-				{
-					if (charInputs == sus)
-						{
-							var poop:String = Highscore.formatSong("Susshed", 1);
-
-							SONG = Song.loadFromJson(poop, "Susshed");
-						}
-				}
-		}
 	var curLight:Int = 0;
 }

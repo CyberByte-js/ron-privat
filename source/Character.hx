@@ -725,6 +725,19 @@ class Character extends FlxSprite
 				addOffset("singLEFT", 600, 220);
 
 				playAnim('idle');
+			case 'phone':
+				tex = Paths.getSparrowAtlas('ron/characters/phone');
+				frames = tex;
+				animation.addByPrefix('idle', "Idle", 24);
+				animation.addByPrefix('singUP', 'Sing Up', 24, false);
+				animation.addByPrefix('singDOWN', 'Sing Down', 24, false);
+				animation.addByPrefix('singLEFT', 'Sing Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'Sing Right', 24, false);
+				addOffset('idle');
+				addOffset("singUP", 42, 38);
+				addOffset("singLEFT", 98, -27);
+				addOffset("singRIGHT", -89, -51);
+				addOffset("singDOWN", 40, -120);
 		}
 
 		dance();

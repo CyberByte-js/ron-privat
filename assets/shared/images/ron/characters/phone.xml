@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="phone.png">
+    <SubTexture name="idle0000" x="0" y="0" width="1920" height="1080" frameX="600" frameY="=100" frameWidth="884" frameHeight="1000"/>
+    <SubTexture name="left0000" x="1920" y="0" width="1920" height="1080" frameX="600" frameY="=100" frameWidth="884" frameHeight="1000"/>
+    <SubTexture name="right0000" x="3840" y="0" width="1920" height="1080" frameX="600" frameY="=100" frameWidth="884" frameHeight="1000"/>
+    <SubTexture name="right0001" x="5760" y="0" width="1920" height="1080" frameX="600" frameY="=100" frameWidth="884" frameHeight="1000"/>
+    <SubTexture name="up0000" x="7680" y="0" width="1920" height="1080" frameX="600" frameY="=100" frameWidth="884" frameHeight="1000"/>
+    <SubTexture name="up0001" x="9600" y="0" width="1920" height="1080" frameX="600" frameY="=100" frameWidth="884" frameHeight="1000"/>
+    <SubTexture name="down0000" x="11520" y="0" width="1920" height="1080" frameX="600" frameY="=100" frameWidth="884" frameHeight="1000"/>
+    <SubTexture name="down0001" x="13440" y="0" width="1920" height="1080" frameX="600" frameY="=100" frameWidth="884" frameHeight="1000"/>
+</TextureAtlas>
