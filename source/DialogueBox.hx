@@ -130,6 +130,15 @@ class DialogueBox extends FlxSpriteGroup
 				box.height = 200;
 				box.x = -100;
 				box.y = 375;
+			case 'file-manipulation':
+				hasDialog = true;
+				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
+				box.width = 200;
+				box.height = 200;
+				box.x = -100;
+				box.y = 375;
 		}
 
 		this.dialogueList = dialogueList;
@@ -157,7 +166,7 @@ class DialogueBox extends FlxSpriteGroup
 			portraitLeft.scrollFactor.set();
 			add(portraitLeft);
 			portraitLeft.visible = false;
-		} else if (PlayState.SONG.song.toLowerCase() == 'ron' || PlayState.SONG.song.toLowerCase() == 'trojan-virus')
+		} else if (PlayState.SONG.song.toLowerCase() == 'ron' || PlayState.SONG.song.toLowerCase() == 'trojan-virus' || PlayState.SONG.song.toLowerCase() == 'file-manipulation')
 		{
 			portraitLeft = new FlxSprite(-1500, 10);
 			portraitLeft.frames = Paths.getSparrowAtlas('portraits/ronPortrait', 'shared');
@@ -255,7 +264,7 @@ class DialogueBox extends FlxSpriteGroup
 				{
 					isEnding = true;
 
-					if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'thorns' || PlayState.SONG.song.toLowerCase() == 'ron' || PlayState.SONG.song.toLowerCase() == 'trojan-virus')
+					if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'thorns' || PlayState.SONG.song.toLowerCase() == 'ron' || PlayState.SONG.song.toLowerCase() == 'trojan-virus' || PlayState.SONG.song.toLowerCase() == 'file-manipulation')
 						FlxG.sound.music.fadeOut(2.2, 0);
 
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)

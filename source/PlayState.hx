@@ -397,6 +397,10 @@ class PlayState extends MusicBeatState
 						":bf:guh??",
 						];
 				}
+			case 'file-manipulation':
+				{
+					dialogue = CoolUtil.coolTextFile(Paths.txt('file-manipulation/dialoge'));
+				}
 		}
 		
 
@@ -1151,13 +1155,6 @@ class PlayState extends MusicBeatState
 							});
 						});
 					});
-				case 'senpai':
-					schoolIntro(doof);
-				case 'roses':
-					FlxG.sound.play(Paths.sound('ANGRY'));
-					schoolIntro(doof);
-				case 'thorns':
-					schoolIntro(doof);
 				case 'ron':
 					schoolIntro(doof);
 				case 'ayo':
@@ -1165,6 +1162,8 @@ class PlayState extends MusicBeatState
 				case 'bloodshed':
 					schoolIntro(doof);
 				case 'trojan-virus':
+					schoolIntro(doof);
+				case 'file-manipulation':
 					schoolIntro(doof);
 				default:
 					startCountdown();
@@ -4127,13 +4126,6 @@ class PlayState extends MusicBeatState
 				dad.playAnim('cheer', true);
 			}
 		}
-		//if (curSong == 'Factory-Reset-b')
-		//	{
-		//		if (curBeat == )
-		//		{
-		//			
-		//		}
-		//	}
 	}
 	var curLight:Int = 0;
 }
