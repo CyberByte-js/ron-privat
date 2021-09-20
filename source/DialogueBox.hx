@@ -44,11 +44,11 @@ class DialogueBox extends FlxSpriteGroup
 	{
 		super();
 
-		if (PlayState.SONG.song.toLowerCase() == 'bloodshed' ||PlayState.SONG.song.toLowerCase() == 'bloodshed-b')
+		if (PlayState.SONG.song.toLowerCase() == 'bloodshed')
 		{
 			FlxG.sound.playMusic(Paths.music('bloodshed-dialogue-mus'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
-		} else
+		} else if (PlayState.SONG.song.toLowerCase() == 'ron' || PlayState.SONG.song.toLowerCase() == 'ayo' || PlayState.SONG.song.toLowerCase() == 'trojan-virus' || PlayState.SONG.song.toLowerCase() == 'file-manipulation' || PlayState.SONG.song.toLowerCase() == 'atelophobia' || PlayState.SONG.song.toLowerCase() == 'factory-reset')
 		{
 			FlxG.sound.playMusic(Paths.music('talking-in-a-cool-way'), 0);
 			FlxG.sound.music.fadeIn(1, 0, 0.8);
