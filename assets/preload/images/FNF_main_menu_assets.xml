@@ -50,4 +50,13 @@
 	<SubTexture name="story mode white0000" x="1250" y="1032" width="796" height="173" frameX="0" frameY="-3" frameWidth="796" frameHeight="181"/>
 	<SubTexture name="story mode white0001" x="0" y="1215" width="794" height="174" frameX="-2" frameY="-2" frameWidth="796" frameHeight="181"/>
 	<SubTexture name="story mode white0002" x="804" y="1215" width="794" height="181" frameX="0" frameY="0" frameWidth="796" frameHeight="181"/>
+	<SubTexture name="options white0002" x="617" y="859" width="610" height="163"/>
+	<SubTexture name="credits basic0000" x="10" y="1405" width="759" height="218"/>
+	<SubTexture name="credits basic0001" x="10" y="1405" width="759" height="218"/>
+	<SubTexture name="credits basic0002" x="10" y="1405" width="759" height="218"/>
+	<SubTexture name="credits basic0003" x="804" y="1397" width="745" height="216"/>
+	<SubTexture name="credits basic0004" x="804" y="1397" width="745" height="216"/>
+	<SubTexture name="credits basic0005" x="804" y="1397" width="745" height="216"/>
+	<SubTexture name="credits white0000" x="0" y="1649" width="735" height="202" frameX="0" frameY="-3" frameWidth="796" frameHeight="181"/>
+	<SubTexture name="credits white0001" x="815" y="1649" width="730" height="203" frameX="-2" frameY="-2" frameWidth="796" frameHeight="181"/>
 </TextureAtlas>
