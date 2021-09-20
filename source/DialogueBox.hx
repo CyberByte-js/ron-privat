@@ -9,6 +9,9 @@ import flixel.input.FlxKeyManager;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
+#if windows
+import Sys;
+#end
 
 using StringTools;
 
