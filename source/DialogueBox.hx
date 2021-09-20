@@ -10,17 +10,11 @@ import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 
-#if windows
-import Sys;
-#end
-
 using StringTools;
 
 class DialogueBox extends FlxSpriteGroup
 {
 	var box:FlxSprite;
-
-	
 
 	var curCharacter:String = '';
 
@@ -36,6 +30,9 @@ class DialogueBox extends FlxSpriteGroup
 
 	var portraitLeft:FlxSprite;
 	var portraitRight:FlxSprite;
+	var ronPortrait:FlxSprite;
+	var madronPortrait:FlxSprite;
+	var hellronPortrait:FlxSprite;
 
 	var handSelect:FlxSprite;
 	var bgFade:FlxSprite;
@@ -45,15 +42,14 @@ class DialogueBox extends FlxSpriteGroup
 		super();
 
 		if (PlayState.SONG.song.toLowerCase() == 'bloodshed')
-		{
-			FlxG.sound.playMusic(Paths.music('bloodshed-dialogue-mus'), 0);
+			{
+				FlxG.sound.playMusic(Paths.music('bloodshed-dialogue-mus'), 0);
+					FlxG.sound.music.fadeIn(1, 0, 0.8);
+			} else if (PlayState.SONG.song.toLowerCase() == 'ron' || PlayState.SONG.song.toLowerCase() == 'ayo' || PlayState.SONG.song.toLowerCase() == 'trojan-virus' || PlayState.SONG.song.toLowerCase() == 'file-manipulation' || PlayState.SONG.song.toLowerCase() == 'atelophobia' || PlayState.SONG.song.toLowerCase() == 'factory-reset')
+			{
+				FlxG.sound.playMusic(Paths.music('talking-in-a-cool-way'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
-		} else if (PlayState.SONG.song.toLowerCase() == 'ron' || PlayState.SONG.song.toLowerCase() == 'ayo' || PlayState.SONG.song.toLowerCase() == 'trojan-virus' || PlayState.SONG.song.toLowerCase() == 'file-manipulation' || PlayState.SONG.song.toLowerCase() == 'atelophobia' || PlayState.SONG.song.toLowerCase() == 'factory-reset')
-		{
-			FlxG.sound.playMusic(Paths.music('talking-in-a-cool-way'), 0);
-			FlxG.sound.music.fadeIn(1, 0, 0.8);
-		}
-				
+			}
 
 		bgFade = new FlxSprite(-200, -200).makeGraphic(Std.int(FlxG.width * 1.3), Std.int(FlxG.height * 1.3), 0xFFB3DFd8);
 		bgFade.scrollFactor.set();
@@ -94,43 +90,8 @@ class DialogueBox extends FlxSpriteGroup
 				var face:FlxSprite = new FlxSprite(320, 170).loadGraphic(Paths.image('weeb/spiritFaceForward'));
 				face.setGraphicSize(Std.int(face.width * 6));
 				add(face);
-			case 'ron':
-				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
-				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
-				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
-				box.width = 200;
-				box.height = 200;
-				box.x = -100;
-				box.y = 375;
-			case 'ayo':
-				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
-				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
-				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
-				box.width = 200;
-				box.height = 200;
-				box.x = -100;
-				box.y = 375;
-			case 'bloodshed':
-				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
-				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
-				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
-				box.width = 200;
-				box.height = 200;
-				box.x = -100;
-				box.y = 375;
-			case 'trojan-virus':
-				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
-				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
-				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
-				box.width = 200;
-				box.height = 200;
-				box.x = -100;
-				box.y = 375;
-			case 'file-manipulation':
+
+			case 'ron' | 'ayo' | 'bloodshed' | 'trojan-virus' | 'file-manipulation':
 				hasDialog = true;
 				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
 				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
@@ -146,62 +107,81 @@ class DialogueBox extends FlxSpriteGroup
 		if (!hasDialog)
 			return;
 
-		if (PlayState.SONG.song.toLowerCase() == 'ayo')
+		if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'roses' || PlayState.SONG.song.toLowerCase() == 'thorns')
 		{
-			portraitLeft = new FlxSprite(-1500, 10);
-			portraitLeft.frames = Paths.getSparrowAtlas('portraits/madronPortrait', 'shared');
-			portraitLeft.animation.addByPrefix('enter', 'Ron Enter', 24, false);
-			portraitLeft.setGraphicSize(Std.int(portraitLeft.width + PlayState.daPixelZoom * 0.175));
+			portraitLeft = new FlxSprite(-20, 40);
+			portraitLeft.frames = Paths.getSparrowAtlas('weeb/senpaiPortrait');
+			portraitLeft.animation.addByPrefix('enter', 'Senpai Portrait Enter', 24, false);
+			portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
 			portraitLeft.updateHitbox();
 			portraitLeft.scrollFactor.set();
 			add(portraitLeft);
 			portraitLeft.visible = false;
-		} else if (PlayState.SONG.song.toLowerCase() == 'bloodshed')
+
+			portraitRight = new FlxSprite(0, 40);
+			portraitRight.frames = Paths.getSparrowAtlas('weeb/bfPortrait');
+			portraitRight.animation.addByPrefix('enter', 'Boyfriend portrait enter', 24, false);
+			portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
+			portraitRight.updateHitbox();
+			portraitRight.scrollFactor.set();
+			add(portraitRight);
+			portraitRight.visible = false;
+		}
+		else if (PlayState.SONG.song.toLowerCase() == 'ron' || 
+			PlayState.SONG.song.toLowerCase() == 'ayo' || 
+		PlayState.SONG.song.toLowerCase() == 'bloodshed' || 
+		PlayState.SONG.song.toLowerCase() == 'trojan-virus' || 
+		PlayState.SONG.song.toLowerCase() == 'file-manipulation')
 		{
-			portraitLeft = new FlxSprite(-1500, 10);
-			portraitLeft.frames = Paths.getSparrowAtlas('portraits/hellronPortrait', 'shared');
-			portraitLeft.animation.addByPrefix('enter', 'Ron Enter', 24, false);
-			portraitLeft.setGraphicSize(Std.int(portraitLeft.width + PlayState.daPixelZoom * 0.175));
-			portraitLeft.updateHitbox();
-			portraitLeft.scrollFactor.set();
-			add(portraitLeft);
-			portraitLeft.visible = false;
-		} else if (PlayState.SONG.song.toLowerCase() == 'ron' || PlayState.SONG.song.toLowerCase() == 'trojan-virus' || PlayState.SONG.song.toLowerCase() == 'file-manipulation')
-		{
-			portraitLeft = new FlxSprite(-1500, 10);
-			portraitLeft.frames = Paths.getSparrowAtlas('portraits/ronPortrait', 'shared');
-			portraitLeft.animation.addByPrefix('enter', 'Ron Enter', 24, false);
-			portraitLeft.setGraphicSize(Std.int(portraitLeft.width + PlayState.daPixelZoom * 0.175));
-			portraitLeft.updateHitbox();
-			portraitLeft.scrollFactor.set();
-			add(portraitLeft);
-			portraitLeft.visible = false;
+			ronPortrait = new FlxSprite(-1500, 10);
+			ronPortrait.frames = Paths.getSparrowAtlas('portraits/ronPortrait', 'shared');
+			ronPortrait.animation.addByPrefix('enter', 'Ron Enter', 24, false);
+			ronPortrait.setGraphicSize(Std.int(ronPortrait.width + PlayState.daPixelZoom * 0.175));
+			ronPortrait.updateHitbox();
+			ronPortrait.scrollFactor.set();
+			add(ronPortrait);
+			ronPortrait.visible = false;
+			
+			portraitRight = new FlxSprite(-30, 100);
+			portraitRight.frames = Paths.getSparrowAtlas('portraits/boyfriendPort');
+			portraitRight.animation.addByPrefix('enter', 'Boyfriend portrait enter instance', 24, false);
+			portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.15));
+			portraitRight.updateHitbox();
+			portraitRight.scrollFactor.set();
+			add(portraitRight);
+			portraitRight.visible = false;
+
+			madronPortrait = new FlxSprite(-1500, 10);
+			madronPortrait.frames = Paths.getSparrowAtlas('portraits/madronPortrait', 'shared');
+			madronPortrait.animation.addByPrefix('enter', 'Ron Enter', 24, false);
+			madronPortrait.setGraphicSize(Std.int(madronPortrait.width + PlayState.daPixelZoom * 0.175));
+			madronPortrait.updateHitbox();
+			madronPortrait.scrollFactor.set();
+			add(madronPortrait);
+			madronPortrait.visible = false;
+
+			hellronPortrait = new FlxSprite(-1500, 10);
+			hellronPortrait.frames = Paths.getSparrowAtlas('portraits/hellronPortrait', 'shared');
+			hellronPortrait.animation.addByPrefix('enter', 'Ron Enter', 24, false);
+			hellronPortrait.setGraphicSize(Std.int(hellronPortrait.width + PlayState.daPixelZoom * 0.175));
+			hellronPortrait.updateHitbox();
+			hellronPortrait.scrollFactor.set();
+			add(hellronPortrait);
+			hellronPortrait.visible = false;
+
+
+
 		}
 
-		portraitRight = new FlxSprite(800, FlxG.height - 489);
-		portraitRight.frames = Paths.getSparrowAtlas('portraits/boyfriendPort', 'shared');
-		portraitRight.animation.addByPrefix('enter', 'Boyfriend portrait enter', 24, true);
-		portraitRight.setGraphicSize(Std.int(portraitRight.width * 0.8));
-		portraitRight.updateHitbox();
-		portraitRight.scrollFactor.set();
-		add(portraitRight);
-		portraitRight.visible = false;
-
 		box.animation.play('normalOpen');
-		box.setGraphicSize(Std.int(box.width * PlayState.daPixelZoom * 0.9));
 		box.updateHitbox();
 		add(box);
 
 		box.screenCenter(X);
-		portraitLeft.screenCenter(X);
-
-		handSelect = new FlxSprite(FlxG.width * 0.9, FlxG.height * 0.9).loadGraphic(Paths.image('weeb/pixelUI/hand_textbox'));
-		add(handSelect);
-
 
 		if (!talkingRight)
 		{
-			box.flipX;
+			// box.flipX = true;
 		}
 
 		dropText = new FlxText(242, 502, Std.int(FlxG.width * 0.6), "", 32);
@@ -264,7 +244,7 @@ class DialogueBox extends FlxSpriteGroup
 				{
 					isEnding = true;
 
-					if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'thorns' || PlayState.SONG.song.toLowerCase() == 'ron' || PlayState.SONG.song.toLowerCase() == 'trojan-virus' || PlayState.SONG.song.toLowerCase() == 'file-manipulation')
+					if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'thorns')
 						FlxG.sound.music.fadeOut(2.2, 0);
 
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
@@ -273,6 +253,9 @@ class DialogueBox extends FlxSpriteGroup
 						bgFade.alpha -= 1 / 5 * 0.7;
 						portraitLeft.visible = false;
 						portraitRight.visible = false;
+						ronPortrait.visible = false;
+						madronPortrait.visible = false;
+						hellronPortrait.visible = false;
 						swagDialogue.alpha -= 1 / 5;
 						dropText.alpha = swagDialogue.alpha;
 					}, 5);
@@ -311,6 +294,9 @@ class DialogueBox extends FlxSpriteGroup
 		{
 			case 'dad':
 				portraitRight.visible = false;
+				ronPortrait.visible = false;
+				madronPortrait.visible = false;
+				hellronPortrait.visible = false;
 				if (!portraitLeft.visible)
 				{
 					portraitLeft.visible = true;
@@ -318,13 +304,42 @@ class DialogueBox extends FlxSpriteGroup
 				}
 			case 'bf':
 				portraitLeft.visible = false;
+				ronPortrait.visible = false;
+				madronPortrait.visible = false;
+				hellronPortrait.visible = false;
+				portraitRight.visible = false;
 				if (!portraitRight.visible)
 				{
 					portraitRight.visible = true;
-					trace('bf pog!!!');
 					portraitRight.animation.play('enter');
-					swagDialogue.sounds =  [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
 				}
+				case 'ron':
+					madronPortrait.visible = false;
+					hellronPortrait.visible = false;
+					portraitRight.visible = false;
+					if (!ronPortrait.visible)
+					{
+						ronPortrait.visible = true;
+						ronPortrait.animation.play('enter');
+					}
+					case 'madron':
+						ronPortrait.visible = false;
+						hellronPortrait.visible = false;
+						portraitRight.visible = false;
+						if (!madronPortrait.visible)
+						{
+							madronPortrait.visible = true;
+							madronPortrait.animation.play('enter');
+						}
+						case 'hellron':
+							madronPortrait.visible = false;
+							ronPortrait.visible = false;
+							portraitRight.visible = false;
+							if (!madronPortrait.visible)
+							{
+								hellronPortrait.visible = true;
+								hellronPortrait.animation.play('enter');
+							}
 		}
 	}
 
