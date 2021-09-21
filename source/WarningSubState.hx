@@ -18,8 +18,7 @@ class WarningSubState extends MusicBeatState
 	{
 		super.create();
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('ron/misc/warning', 'shared'));
-		bg.scale.x *= 1.55;
-		bg.scale.y *= 1.55;
+		bg.setGraphicSize(Std.int(bg.width * 0.85));
 		bg.screenCenter();
 		add(bg);
 	}
