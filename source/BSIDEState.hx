@@ -36,8 +36,8 @@ class BSIDEState extends MusicBeatState
 
 	var weekCharacters:Array<Dynamic> = [
 		['', 'bf', 'gf'],
-		['', 'bf', 'gf'],
-		['', 'bf', 'gf']
+		['ron', 'bf', 'gf'],
+		['ron2', 'bf', 'gf']
 	];
 
 	var weekNames:Array<String> = [
