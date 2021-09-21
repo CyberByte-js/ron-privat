@@ -174,6 +174,13 @@
 	<SubTexture name="ron idle0027" x="2836" y="3026" width="358" height="429" frameX="-5" frameY="-7" frameWidth="371" frameHeight="436"/>
 	<SubTexture name="ron idle0028" x="2476" y="3026" width="360" height="427" frameX="-4" frameY="-9" frameWidth="371" frameHeight="436"/>
 	<SubTexture name="ron idle0029" x="2836" y="3026" width="358" height="429" frameX="-5" frameY="-7" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="ronweek2 idle0000" x="3900" y="3026" width="349" height="436" frameX="-9" frameY="0" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="ronweek2 idle0001" x="3900" y="3026" width="349" height="436" frameX="-9" frameY="0" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="ronweek2 idle0002" x="3900" y="3026" width="349" height="436" frameX="-9" frameY="0" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="ronweek2 idle0003" x="3900" y="3026" width="349" height="436" frameX="-9" frameY="0" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="ronweek2 idle0004" x="3900" y="3026" width="349" height="436" frameX="-9" frameY="0" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="ronweek2 idle0005" x="3900" y="3026" width="349" height="436" frameX="-9" frameY="0" frameWidth="371" frameHeight="436"/>
+	<SubTexture name="ronweek2 idle0006" x="3900" y="3026" width="349" height="436" frameX="-9" frameY="0" frameWidth="371" frameHeight="436"/>
 	<SubTexture name="spooky dance idle BLACK LINES0000" x="4249" y="3026" width="381" height="549" frameX="-50" frameY="0" frameWidth="492" frameHeight="549"/>
 	<SubTexture name="spooky dance idle BLACK LINES0001" x="4249" y="3026" width="381" height="549" frameX="-50" frameY="0" frameWidth="492" frameHeight="549"/>
 	<SubTexture name="spooky dance idle BLACK LINES0002" x="4630" y="3026" width="379" height="541" frameX="-55" frameY="-8" frameWidth="492" frameHeight="549"/>
