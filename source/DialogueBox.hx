@@ -230,8 +230,12 @@ class DialogueBox extends FlxSpriteGroup
 				{
 					isEnding = true;
 
-					if (PlayState.SONG.song.toLowerCase() == 'ron' || PlayState.SONG.song.toLowerCase() == 'trojan-virus' || PlayState.SONG.song.toLowerCase() == 'file-manipulation' || PlayState.SONG.song.toLowerCase() == 'atelophobia' || PlayState.SONG.song.toLowerCase() == 'factory-reset')
+					if (PlayState.SONG.song.toLowerCase() == 'ron' || PlayState.SONG.song.toLowerCase() == 'trojan-virus' || PlayState.SONG.song.toLowerCase() == 'file-manipulation' || PlayState.SONG.song.toLowerCase() == 'factory-reset')
 						FlxG.sound.music.fadeOut(2.2, 0);
+					else if (PlayState.SONG.song.toLowerCase() == 'atelophobia')
+						{
+							//put the custcene here
+						}
 
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
 					{
