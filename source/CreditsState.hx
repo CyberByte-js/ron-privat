@@ -189,9 +189,9 @@ class CreditsState extends MusicBeatState
 				case 7:
 					FlxG.openURL("https://gamebanana.com/members/1966530");
 				case 8:
-					FlxG.openURL("https://gamebanana.com/members/1944819");
-				case 9:
 					FlxG.openURL("https://www.youtube.com/channel/UC-jtjO3youJyDbpH67uDn_g");
+				case 9:
+					FlxG.openURL("https://gamebanana.com/members/1795346");
 				case 10:
 					FlxG.openURL("https://gamebanana.com/members/1864849");
 				case 11:
