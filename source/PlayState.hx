@@ -2767,35 +2767,40 @@ class PlayState extends MusicBeatState
 		else
 		{
 			if (isStoryMode)
-			{
-				campaignScore += Math.round(songScore);
-
-				storyPlaylist.remove(storyPlaylist[0]);
-
-				if (storyPlaylist.length <= 0)
 				{
-					transIn = FlxTransitionableState.defaultTransIn;
-					transOut = FlxTransitionableState.defaultTransOut;
-
-					paused = true;
-
-					FlxG.sound.music.stop();
-					vocals.stop();
-					if (FlxG.save.data.scoreScreen)
-						openSubState(new ResultsScreen());
-					else
-					{
-						FlxG.sound.playMusic(Paths.music('freakyMenu'));
-						FlxG.switchState(new MainMenuState());
-					}
-
-					#if windows
-					if (luaModchart != null)
-					{
-						luaModchart.die();
-						luaModchart = null;
-					}
-					#end
+					campaignScore += Math.round(songScore);
+	
+					storyPlaylist.remove(storyPlaylist[0]);
+	
+					if (storyPlaylist.length <= 0)
+						{
+							if (curSong == "factory-reset"){
+								FlxG.switchState(new EndingState());
+							}else{
+							FlxG.sound.playMusic(Paths.music('freakyMenu'));
+								FlxG.switchState(new StoryMenuState());
+							}
+		
+							transOut = FlxTransitionableState.defaultTransOut;
+		
+							FlxG.switchState(new StoryMenuState());
+		
+							// if ()
+							StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
+		
+							if (SONG.validScore)
+							{
+								NGio.unlockMedal(60961);
+								Highscore.saveWeekScore(storyWeek, campaignScore, storyDifficulty);
+							}
+	
+						#if windows
+						if (luaModchart != null)
+						{
+							luaModchart.die();
+							luaModchart = null;
+						}
+						#end
 
 					// if ()
 					StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
