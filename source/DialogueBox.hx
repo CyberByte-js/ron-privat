@@ -234,7 +234,7 @@ class DialogueBox extends FlxSpriteGroup
 						FlxG.sound.music.fadeOut(2.2, 0);
 					else if (PlayState.SONG.song.toLowerCase() == 'atelophobia')
 						{
-							//put the custcene here
+							FlxG.switchState(new VideoState('assets/videos/atelscene.webm', new PlayState())));
 						}
 
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
