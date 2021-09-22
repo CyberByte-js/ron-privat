@@ -401,6 +401,10 @@ class PlayState extends MusicBeatState
 				{
 					dialogue = CoolUtil.coolTextFile(Paths.txt('file-manipulation/dialoge'));
 				}
+			case 'atelophobia':
+				{
+					dialogue = CoolUtil.coolTextFile(Paths.txt('atelophobia/dialoge'));
+				}
 		}
 		
 
@@ -1155,6 +1159,8 @@ class PlayState extends MusicBeatState
 				case 'trojan-virus':
 					schoolIntro(doof);
 				case 'file-manipulation':
+					schoolIntro(doof);
+				case 'atelophobia':
 					schoolIntro(doof);
 				default:
 					startCountdown();
