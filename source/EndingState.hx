@@ -6,12 +6,12 @@ import flixel.util.FlxTimer;
 class EndingState extends FlxState
 {
 
-	var _budgetEnding:Bool = false;
+	var _goodEnding:Bool = false;
 	
-	public function new(budgetEnding:Bool = true) 
+	public function new(goodEnding:Bool = true) 
 	{
 		super();
-		_budgetEnding = budgetEnding;
+		_goodEnding = goodEnding;
 		
 	}
 	
@@ -19,26 +19,27 @@ class EndingState extends FlxState
 	{
 		super.create();
 		var end:FlxSprite = new FlxSprite(0, 0);
-		if (_budgetEnding)
-        {
-			end.loadGraphic(Paths.image("ron/misc/fard"));
+		if (_goodEnding)
+            {
+			end.loadGraphic(Paths.image("ron/fard"));
 			end.screenCenter(X);
 			end.screenCenter(Y);
 			FlxG.sound.playMusic(Paths.music("endmusic"),1,false);
 		}
         else
         {
-             // need this or it wont work
-            end.loadGraphic(Paths.image("ron/misc/fard"));
-            end.screenCenter(X);
-            end.screenCenter(Y);
-            FlxG.sound.playMusic(Paths.music("endmusic"),1,false);
-        }
+			// need this or it wont work also changed ending thingy AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+            // i've been testing this for like 30 minutes now and it doesn't wanna swtich what
+			end.loadGraphic(Paths.image("ron/fard"));
+			end.screenCenter(X);
+			end.screenCenter(Y);
+			FlxG.sound.playMusic(Paths.music("endmusic"),1,false);
+		}
 		add(end);
 		FlxG.camera.fade(FlxColor.BLACK, 0.8, true);
 		
 		
-		new FlxTimer().start(10, endIt);
+		new FlxTimer().start(30, endIt);
 		
 	}
 	
@@ -54,7 +55,7 @@ class EndingState extends FlxState
 	
 	
 	public function endIt(e:FlxTimer=null){
-		trace("ME WHEN THE uhh IS THE END *aflac the end starts playing*");
+        trace("ME WHEN THE uhh IS THE END *aflac the end starts playing*");
 		FlxG.switchState(new StoryMenuState());
 	}
 	
