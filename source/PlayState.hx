@@ -344,47 +344,11 @@ class PlayState extends MusicBeatState
 		switch (songLowercase)
 		{
 			case 'ron':
-				switch (FlxG.save.data.lang)
-				{
-					case 'es-la':
-						dialogue = CoolUtil.coolTextFile(Paths.txt('ron/ronIsBackES'));
-					case 'en-us':
 						dialogue = CoolUtil.coolTextFile(Paths.txt('ron/ronIsBack'));
-					case 'pt-br':
-						dialogue = CoolUtil.coolTextFile(Paths.txt('ron/ronIsBackPT'));
-					case 'ger':
-						dialogue = CoolUtil.coolTextFile(Paths.txt('ron/ronIsBackgerman'));
-					case 'fr':
-						dialogue = CoolUtil.coolTextFile(Paths.txt('ron/ronIsBackFR'));
-				}
 			case 'ayo':
-				switch (FlxG.save.data.lang)
-				{
-					case 'en-us':		
 						dialogue = CoolUtil.coolTextFile(Paths.txt('ayo/diaman'));
-					case 'es-la':
-						dialogue = CoolUtil.coolTextFile(Paths.txt('ayo/diamanES'));
-					case 'pt-br':
-						dialogue = CoolUtil.coolTextFile(Paths.txt('ayo/diamanPT'));
-					case 'ger':
-						dialogue = CoolUtil.coolTextFile(Paths.txt('ayo/diamangerman'));
-					case 'fr':
-						dialogue = CoolUtil.coolTextFile(Paths.txt('ayo/diamanFR'));
-				}
 			case 'bloodshed':
-				switch (FlxG.save.data.lang)
-				{
-					case 'en-us':
 						dialogue = CoolUtil.coolTextFile(Paths.txt('bloodshed/diamane'));
-					case 'es-la':
-						dialogue = CoolUtil.coolTextFile(Paths.txt('bloodshed/diamaneES'));
-					case 'pt-br':
-						dialogue = CoolUtil.coolTextFile(Paths.txt('bloodshed/diamanePT'));
-					case 'ger':
-						dialogue = CoolUtil.coolTextFile(Paths.txt('bloodshed/diamanegerman'));
-					case 'fr':
-						dialogue = CoolUtil.coolTextFile(Paths.txt('bloodshed/diamaneFR'));
-				}
 			case 'trojan-virus':
 				{					
 					dialogue = [

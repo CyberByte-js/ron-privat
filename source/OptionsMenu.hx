@@ -63,7 +63,7 @@ class OptionsMenu extends MusicBeatState
 			new ShowInput("Display every single input in the score screen."),
 			new Optimization("No backgrounds, no characters, centered notes, no player 2."),
 			new BotPlay("Showcase your charts and mods with autoplay."),
-			new Language("Change your language. (Right for pt-br, Left for es-la, Enter for en-us, Alt for ger, F4 for fr)"),
+			// new Language("Change your language. (Right for pt-br, Left for es-la, Enter for en-us, Alt for ger, F4 for fr)"),
 		])
 		
 	];
