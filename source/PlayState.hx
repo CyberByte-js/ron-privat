@@ -2774,13 +2774,16 @@ class PlayState extends MusicBeatState
 	
 					if (storyPlaylist.length <= 0)
 						{
-							if (curSong == "factory-reset"){
+							if (curSong == "factory-reset")
+							{
 								FlxG.switchState(new EndingState());
-							}else{
+							}else
+							{
 							FlxG.sound.playMusic(Paths.music('freakyMenu'));
 								FlxG.switchState(new StoryMenuState());
 							}
 		
+							transIn = FlxTransitionableState.defaultTransIn;
 							transOut = FlxTransitionableState.defaultTransOut;
 		
 							FlxG.switchState(new StoryMenuState());
@@ -2801,19 +2804,19 @@ class PlayState extends MusicBeatState
 							luaModchart = null;
 						}
 						#end
-
-					// if ()
-					StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
-
-					if (SONG.validScore)
-					{
-						NGio.unlockMedal(60961);
-						Highscore.saveWeekScore(storyWeek, campaignScore, storyDifficulty);
+	
+						// if ()
+						StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
+	
+						if (SONG.validScore)
+						{
+							NGio.unlockMedal(60961);
+							Highscore.saveWeekScore(storyWeek, campaignScore, storyDifficulty);
+						}
+	
+						FlxG.save.data.weekUnlocked = StoryMenuState.weekUnlocked;
+						FlxG.save.flush();
 					}
-
-					FlxG.save.data.weekUnlocked = StoryMenuState.weekUnlocked;
-					FlxG.save.flush();
-				}
 				else
 				{
 					

@@ -6,12 +6,12 @@ import flixel.util.FlxTimer;
 class EndingState extends FlxState
 {
 
-	var _ending:Bool = false;
+	var _budgetEnding:Bool = false;
 	
-	public function new(ending:Bool = true) 
+	public function new(budgetEnding:Bool = true) 
 	{
 		super();
-		_ending = ending;
+		_budgetEnding = budgetEnding;
 		
 	}
 	
@@ -19,12 +19,21 @@ class EndingState extends FlxState
 	{
 		super.create();
 		var end:FlxSprite = new FlxSprite(0, 0);
-		if (_ending){
+		if (_budgetEnding)
+        {
 			end.loadGraphic(Paths.image("ron/misc/fard"));
 			end.screenCenter(X);
 			end.screenCenter(Y);
 			FlxG.sound.playMusic(Paths.music("endmusic"),1,false);
 		}
+        else
+        {
+             // need this or it wont work
+            end.loadGraphic(Paths.image("ron/misc/fard"));
+            end.screenCenter(X);
+            end.screenCenter(Y);
+            FlxG.sound.playMusic(Paths.music("endmusic"),1,false);
+        }
 		add(end);
 		FlxG.camera.fade(FlxColor.BLACK, 0.8, true);
 		
