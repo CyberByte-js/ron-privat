@@ -40,6 +40,10 @@ class DialogueBox extends FlxSpriteGroup
 	var handSelect:FlxSprite;
 	var bgFade:FlxSprite;
 
+	var isCutscene:Bool = false;
+
+	var video:MP4Handler = new MP4Handler();
+
 	public function new(talkingRight:Bool = true, ?dialogueList:Array<String>)
 	{
 		super();
@@ -233,8 +237,17 @@ class DialogueBox extends FlxSpriteGroup
 					if (PlayState.SONG.song.toLowerCase() == 'ron' || PlayState.SONG.song.toLowerCase() == 'trojan-virus' || PlayState.SONG.song.toLowerCase() == 'file-manipulation' || PlayState.SONG.song.toLowerCase() == 'factory-reset')
 						FlxG.sound.music.fadeOut(2.2, 0);
 					else if (PlayState.SONG.song.toLowerCase() == 'atelophobia')
+					{
+						video.playMP4(Paths.video('atelscene.mp4'), function()
 						{
-							FlxG.switchState(new VideoState('assets/videos/atelscene.webm', new PlayState()));
+							FlxG.sound.music.fadeOut(2.2, 0);
+							isCutscene = true;
+						});
+					}
+					else
+						{
+							if (isCutscene)
+							video.onVLCComplete();
 						}
 
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
