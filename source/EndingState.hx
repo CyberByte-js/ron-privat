@@ -40,6 +40,8 @@ class EndingState extends FlxState
 		
 		
 		new FlxTimer().start(30, endIt);
+
+		trace("it went to the stage at least i think");
 		
 	}
 	
