@@ -238,18 +238,8 @@ class DialogueBox extends FlxSpriteGroup
 						FlxG.sound.music.fadeOut(2.2, 0);
 					else if (PlayState.SONG.song.toLowerCase() == 'atelophobia')
 					{
-						video.playMP4(Paths.video('atelscene.mp4'), function()
-						{
-							FlxG.sound.music.fadeOut(2.2, 0);
-							isCutscene = true;
-						});
+						video.playMP4(Paths.video('atelscene'), new PlayState(), false, false, false);
 					}
-					else
-						{
-							if (isCutscene)
-							video.onVLCComplete();
-						}
-
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
 					{
 						box.alpha -= 1 / 5;
