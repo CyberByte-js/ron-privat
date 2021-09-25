@@ -2774,12 +2774,16 @@ class PlayState extends MusicBeatState
 	
 					if (storyPlaylist.length <= 0)
 						{
-							if (curSong == "factory-reset")
+							if (curSong == "Factory Reset")
 							{
 								FlxG.switchState(new EndingState());
-							}else
+							}else if (curSong.endsWith('-b'))
 							{
 							FlxG.sound.playMusic(Paths.music('freakyMenu'));
+								FlxG.switchState(new BSIDEState());
+							} else
+							{
+								FlxG.sound.playMusic(Paths.music('freakyMenu'));
 								FlxG.switchState(new StoryMenuState());
 							}
 		
