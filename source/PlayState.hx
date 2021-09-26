@@ -267,6 +267,8 @@ class PlayState extends MusicBeatState
 		repPresses = 0;
 		repReleases = 0;
 
+		var dialogueThing:DialogueBox = new DialogueBox(false, dialogue);
+
 
 		PlayStateChangeables.useDownscroll = FlxG.save.data.downscroll;
 		PlayStateChangeables.safeFrames = FlxG.save.data.frames;
@@ -367,7 +369,14 @@ class PlayState extends MusicBeatState
 				}
 			case 'atelophobia':
 				{
-					dialogue = CoolUtil.coolTextFile(Paths.txt('atelophobia/dialoge'));
+					if (dialogueThing.cutsceneEnded)
+					{
+						dialogue = CoolUtil.coolTextFile(Paths.txt('atelophobia/dialoge2'));
+					} else if (!dialogueThing.cutsceneEnded)
+					{
+						dialogue = CoolUtil.coolTextFile(Paths.txt('atelophobia/dialoge'));
+					}
+					
 				}
 		}
 		

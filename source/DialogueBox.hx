@@ -44,7 +44,7 @@ class DialogueBox extends FlxSpriteGroup
 
 	var video:MP4Handler = new MP4Handler();
 
-	var cutsceneEnded = false;
+	public var cutsceneEnded:Bool = false;
 
 	public function new(talkingRight:Bool = true, ?dialogueList:Array<String>)
 	{
@@ -78,29 +78,6 @@ class DialogueBox extends FlxSpriteGroup
 		var hasDialog = false;
 		switch (PlayState.SONG.song.toLowerCase())
 		{
-			case 'senpai':
-				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-pixel');
-				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
-				box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
-			case 'roses':
-				hasDialog = true;
-				FlxG.sound.play(Paths.sound('ANGRY_TEXT_BOX'));
-
-				box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-senpaiMad');
-				box.animation.addByPrefix('normalOpen', 'SENPAI ANGRY IMPACT SPEECH', 24, false);
-				box.animation.addByIndices('normal', 'SENPAI ANGRY IMPACT SPEECH', [4], "", 24);
-
-			case 'thorns':
-				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-evil');
-				box.animation.addByPrefix('normalOpen', 'Spirit Textbox spawn', 24, false);
-				box.animation.addByIndices('normal', 'Spirit Textbox spawn', [11], "", 24);
-
-				var face:FlxSprite = new FlxSprite(320, 170).loadGraphic(Paths.image('weeb/spiritFaceForward'));
-				face.setGraphicSize(Std.int(face.width * 6));
-				add(face);
-
 			case 'ron' | 'ayo' | 'bloodshed' | 'trojan-virus' | 'file-manipulation' | 'atelophobia' | 'factory-reset':
 				hasDialog = true;
 				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
@@ -198,14 +175,6 @@ class DialogueBox extends FlxSpriteGroup
 	override function update(elapsed:Float)
 	{
 		// HARD CODING CUZ IM STUPDI
-		if (PlayState.SONG.song.toLowerCase() == 'roses')
-			portraitLeft.visible = false;
-		if (PlayState.SONG.song.toLowerCase() == 'thorns')
-		{
-			portraitLeft.color = FlxColor.BLACK;
-			swagDialogue.color = FlxColor.WHITE;
-			dropText.color = FlxColor.BLACK;
-		}
 
 		dropText.text = swagDialogue.text;
 
@@ -242,6 +211,10 @@ class DialogueBox extends FlxSpriteGroup
 					{
 						var cutsceneEnded = true;
 						video.playMP4(Paths.video('atelscene'), new PlayState(), false, false, false);
+						trace(cutsceneEnded);
+					} else if (PlayState.SONG.song.toLowerCase() == 'atelophobia' && cutsceneEnded)
+					{
+						FlxG.sound.music.fadeOut(2.2, 0);
 					}
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
 					{
@@ -255,8 +228,15 @@ class DialogueBox extends FlxSpriteGroup
 
 					new FlxTimer().start(1.2, function(tmr:FlxTimer)
 					{
-						finishThing();
-						kill();
+						if (!cutsceneEnded)
+						{
+							finishThing();
+							kill();
+						}else
+						{
+							return;	
+						}
+						
 					});
 				}
 			}
