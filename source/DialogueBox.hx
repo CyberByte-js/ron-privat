@@ -42,7 +42,7 @@ class DialogueBox extends FlxSpriteGroup
 
 	var isCutscene:Bool = false;
 
-	var video:MP4Handler = new MP4Handler();
+	public var video:MP4Handler = new MP4Handler();
 
 	public var cutsceneEnded:Bool = false;
 
@@ -209,12 +209,16 @@ class DialogueBox extends FlxSpriteGroup
 						FlxG.sound.music.fadeOut(2.2, 0);
 					else if (PlayState.SONG.song.toLowerCase() == 'atelophobia')
 					{
-						var cutsceneEnded = true;
-						video.playMP4(Paths.video('atelscene'), new PlayState(), false, false, false);
-						trace(cutsceneEnded);
-					} else if (PlayState.SONG.song.toLowerCase() == 'atelophobia' && cutsceneEnded)
-					{
-						FlxG.sound.music.fadeOut(2.2, 0);
+						if (!PlayState.atelophobiaCutsceneDone)
+						{
+							PlayState.atelophobiaCutsceneDone = true;
+							finishThing = function() { };
+							video.playMP4(Paths.video('atelscene'), new PlayState(), false, false, false);
+						}
+						else
+						{
+							FlxG.sound.music.fadeOut(2.2, 0);
+						}
 					}
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
 					{

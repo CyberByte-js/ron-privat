@@ -236,6 +236,8 @@ class PlayState extends MusicBeatState
 
 	private var executeModchart = false;
 
+	public static var atelophobiaCutsceneDone = false;
+
 	// API stuff
 	
 	public function addObject(object:FlxBasic) { add(object); }
@@ -266,9 +268,6 @@ class PlayState extends MusicBeatState
 
 		repPresses = 0;
 		repReleases = 0;
-
-		var dialogueThing:DialogueBox = new DialogueBox(false, dialogue);
-
 
 		PlayStateChangeables.useDownscroll = FlxG.save.data.downscroll;
 		PlayStateChangeables.safeFrames = FlxG.save.data.frames;
@@ -369,14 +368,8 @@ class PlayState extends MusicBeatState
 				}
 			case 'atelophobia':
 				{
-					if (dialogueThing.cutsceneEnded)
-					{
-						dialogue = CoolUtil.coolTextFile(Paths.txt('atelophobia/dialoge2'));
-					} else if (!dialogueThing.cutsceneEnded)
-					{
+						atelophobiaCutsceneDone ? dialogue = CoolUtil.coolTextFile(Paths.txt('atelophobia/dialoge2')) : 
 						dialogue = CoolUtil.coolTextFile(Paths.txt('atelophobia/dialoge'));
-					}
-					
 				}
 		}
 		
