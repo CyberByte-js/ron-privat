@@ -734,6 +734,16 @@ class PlayState extends MusicBeatState
 					bg.scrollFactor.set(0.9, 0.9);
 					bg.active = false;
 					add(bg);
+					case 'NOGFHAHA':
+						defaultCamZoom = 0.9;
+						curStage = 'NOGFHAHA';
+						var bg:FlxSprite = new FlxSprite(-300, -100).loadGraphic(Paths.image('ron/bg/png'));
+							bg.setGraphicSize(Std.int(bg.width * 1.7));
+							bg.setGraphicSize(Std.int(bg.height * 1.7));
+							bg.antialiasing = true;
+							bg.scrollFactor.set(0.9, 0.9);
+							bg.active = false;
+							add(bg);
 			case 'baka':
 				{
 					defaultCamZoom = 0.9;
@@ -892,6 +902,9 @@ class PlayState extends MusicBeatState
 				add(evilTrail);
 				// evilTrail.scrollFactor.set(1.1, 1.1);
 				}
+			
+				case 'NOGFHAHA':
+					gf.y -= 626742734737;
 		}
 
 		if (!PlayStateChangeables.Optimize)
