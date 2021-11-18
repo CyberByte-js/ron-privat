@@ -768,6 +768,18 @@ class PlayState extends MusicBeatState
 					bg.active = false;
 					add(bg);
 				}
+				case 'oldhell':
+				{
+					defaultCamZoom = 0.9;
+					curStage = 'hell';
+					var bg:FlxSprite = new FlxSprite(300, 200).loadGraphic(Paths.image('ron/bg/oldmadRon_ground'));
+					bg.setGraphicSize(Std.int(bg.width * 5));
+					bg.setGraphicSize(Std.int(bg.height * 5));
+					bg.antialiasing = true;
+					bg.scrollFactor.set(0.9, 0.9);
+					bg.active = false;
+					add(bg);
+				}
 			default:
 			{
 				defaultCamZoom = 0.9;
