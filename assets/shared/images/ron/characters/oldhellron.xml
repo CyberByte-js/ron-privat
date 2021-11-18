@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="hellron.png">
+<TextureAtlas imagePath="oldhellron.png">
 	<!-- Created with Adobe Animate version 21.0.3.38773 -->
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="Idle0000" x="5" y="5" width="346" height="484" frameX="-1" frameY="-10" frameWidth="348" frameHeight="494"/>
