@@ -2107,27 +2107,27 @@ class PlayState extends MusicBeatState
 			#end	
 			if (SONG.song.toLowerCase() == 'Bloodshed')
 			{
-				PlayState.SONG = Song.loadFromJson("impossiblerun", "impossiblerun");
+				PlayState.SONG = Song.loadFromJson("expurgation", "expurgation");
 			}
 			else if (SONG.song.toLowerCase() == 'susshed')
 			{
-				PlayState.SONG = Song.loadFromJson("impossiblerun", "impossiblerun");
+				PlayState.SONG = Song.loadFromJson("expurgation", "expurgation");
 			}
 			else if (SONG.song.toLowerCase() == 'Factory-reset')
 			{
-				PlayState.SONG = Song.loadFromJson("impossiblerun", "impossiblerun");
+				PlayState.SONG = Song.loadFromJson("expurgation", "expurgation");
 			}
 			else if (SONG.song.toLowerCase() == 'Bloodshed-old')
 			{
-				PlayState.SONG = Song.loadFromJson("impossiblerun", "impossiblerun");
+				PlayState.SONG = Song.loadFromJson("expurgation", "expurgation");
 			}
 			else if (SONG.song.toLowerCase() == 'Bloodshed-B')
 			{
-				PlayState.SONG = Song.loadFromJson("impossiblerun", "impossiblerun");
+				PlayState.SONG = Song.loadFromJson("expurgation", "expurgation");
 			}
 			else if (SONG.song.toLowerCase() == 'Factory-reset-B')
 			{
-				PlayState.SONG = Song.loadFromJson("impossiblerun", "impossiblerun");
+				PlayState.SONG = Song.loadFromJson("expurgation", "expurgation");
 			}
 			else
 			{
