@@ -57,7 +57,8 @@ class HealthIcon extends FlxSprite
 		animation.add('factorytankman-2', [42, 43], 0, false, isPlayer);
 		animation.add('hellron-2', [38, 39], 0, false, isPlayer);
 		animation.add('oldhellron', [44, 45], 0, false, isPlayer);
-		animation.add('gf-in', [46], 0, false, isPlayer);
+		animation.add('susron', [46, 47], 0, false, isPlayer);
+		animation.add('gf-in', [48], 0, false, isPlayer);
 		animation.play(char);
 
 		switch(char)
