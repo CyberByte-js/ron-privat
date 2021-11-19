@@ -2107,27 +2107,27 @@ class PlayState extends MusicBeatState
 			#end	
 			if (SONG.song.toLowerCase() == 'Bloodshed')
 			{
-				FlxG.switchState(new CheaterState());
+				PlayState.SONG = Song.loadFromJson("impossiblerun", "impossiblerun");
 			}
 			else if (SONG.song.toLowerCase() == 'susshed')
 			{
-				FlxG.switchState(new CheaterState());
+				PlayState.SONG = Song.loadFromJson("impossiblerun", "impossiblerun");
 			}
-			else if (SONG.song.toLowerCase() == 'Factory reset')
+			else if (SONG.song.toLowerCase() == 'Factory-reset')
 			{
-				FlxG.switchState(new CheaterState());
+				PlayState.SONG = Song.loadFromJson("impossiblerun", "impossiblerun");
 			}
 			else if (SONG.song.toLowerCase() == 'Bloodshed-old')
 			{
-				FlxG.switchState(new CheaterState());
+				PlayState.SONG = Song.loadFromJson("impossiblerun", "impossiblerun");
 			}
 			else if (SONG.song.toLowerCase() == 'Bloodshed-B')
 			{
-				FlxG.switchState(new CheaterState());
+				PlayState.SONG = Song.loadFromJson("impossiblerun", "impossiblerun");
 			}
-			else if (SONG.song.toLowerCase() == 'Factory reset-B')
+			else if (SONG.song.toLowerCase() == 'Factory-reset-B')
 			{
-				FlxG.switchState(new CheaterState());
+				PlayState.SONG = Song.loadFromJson("impossiblerun", "impossiblerun");
 			}
 			else
 			{
