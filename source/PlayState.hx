@@ -2128,9 +2128,25 @@ class PlayState extends MusicBeatState
 				PlayState.SONG = Song.loadFromJson("expurgation", "expurgation");
 			}
 			else if (SONG.song.toLowerCase() == 'expurgation')
-			{				
-				PlayState.SONG = Song.loadFromJson("expurgation", "expurgation");
-			}
+				{
+					boyfriend.stunned = true;
+
+					persistentUpdate = false;
+					persistentDraw = false;
+					paused = true;
+		
+					vocals.stop();
+					FlxG.sound.music.stop();
+		
+					openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+		
+					#if windows
+					// Game Over doesn't get his own variable because it's only used here
+					DiscordClient.changePresence("GAME OVER -- " + SONG.song + " (" + storyDifficultyText + ") " + Ratings.GenerateLetterRank(accuracy),"\nAcc: " + HelperFunctions.truncateFloat(accuracy, 2) + "% | Score: " + songScore + " | Misses: " + misses  , iconRPC);
+					#end
+		
+					// FlxG.switchState(new GameOverState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+				}
 			else
 			{
 				FlxG.switchState(new ChartingState());
