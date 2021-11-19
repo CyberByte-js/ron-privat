@@ -724,6 +724,18 @@ class PlayState extends MusicBeatState
 				bg.active = false;
 				add(bg);
 			}
+			case 'oldhell':
+			{
+				defaultCamZoom = 0.9;
+				curStage = 'hell';
+				var bg:FlxSprite = new FlxSprite(300, 200).loadGraphic(Paths.image('ron/bg/oldmadRon_ground'));
+				bg.setGraphicSize(Std.int(bg.width * 5));
+				bg.setGraphicSize(Std.int(bg.height * 5));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.9, 0.9);
+				bg.active = false;
+				add(bg);
+			}
 			case 'glitch':
 				defaultCamZoom = 0.9;
 				curStage = 'glitch';
@@ -763,18 +775,6 @@ class PlayState extends MusicBeatState
 					var bg:FlxSprite = new FlxSprite(-100, -100).loadGraphic(Paths.image('ron/bg/bg'));
 					bg.setGraphicSize(Std.int(bg.width * 2));
 					bg.setGraphicSize(Std.int(bg.height * 2));
-					bg.antialiasing = true;
-					bg.scrollFactor.set(0.9, 0.9);
-					bg.active = false;
-					add(bg);
-				}
-				case 'oldhell':
-				{
-					defaultCamZoom = 0.9;
-					curStage = 'hell';
-					var bg:FlxSprite = new FlxSprite(300, 200).loadGraphic(Paths.image('ron/bg/oldmadRon_ground'));
-					bg.setGraphicSize(Std.int(bg.width * 5));
-					bg.setGraphicSize(Std.int(bg.height * 5));
 					bg.antialiasing = true;
 					bg.scrollFactor.set(0.9, 0.9);
 					bg.active = false;
@@ -2600,6 +2600,14 @@ class PlayState extends MusicBeatState
 						//shakes the fuck out of your screen and hud -ekical
 						//now it drains your health because fuck you -ekical
 						if (dad.curCharacter == 'hellron')
+							{
+								FlxG.camera.shake(0.025, 0.1);
+								camHUD.shake(0.0055, 0.15);
+								health -= 0.005;
+							}
+						
+						//now it also applies to susron because the imposter is sus -NOT ekical, but busybody64
+						if (dad.curCharacter == 'susron')
 							{
 								FlxG.camera.shake(0.025, 0.1);
 								camHUD.shake(0.0055, 0.15);
