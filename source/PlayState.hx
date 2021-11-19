@@ -2105,7 +2105,27 @@ class PlayState extends MusicBeatState
 			#if windows
 			DiscordClient.changePresence("Chart Editor", null, null, true);
 			#end	
-			if (SONG.song.toLowerCase() == 'bloodshed')
+			if (SONG.song.toLowerCase() == 'Bloodshed')
+			{
+				FlxG.switchState(new CheaterState());
+			}
+			else if (SONG.song.toLowerCase() == 'susshed')
+			{
+				FlxG.switchState(new CheaterState());
+			}
+			else if (SONG.song.toLowerCase() == 'Factory reset')
+			{
+				FlxG.switchState(new CheaterState());
+			}
+			else if (SONG.song.toLowerCase() == 'Bloodshed-old')
+			{
+				FlxG.switchState(new CheaterState());
+			}
+			else if (SONG.song.toLowerCase() == 'Bloodshed-B')
+			{
+				FlxG.switchState(new CheaterState());
+			}
+			else if (SONG.song.toLowerCase() == 'Factory reset-B')
 			{
 				FlxG.switchState(new CheaterState());
 			}
