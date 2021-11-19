@@ -2104,9 +2104,16 @@ class PlayState extends MusicBeatState
 				}
 			#if windows
 			DiscordClient.changePresence("Chart Editor", null, null, true);
-			#end
-			FlxG.switchState(new ChartingState());
-			FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN,handleInput);
+			#end	
+			if (SONG.song.toLowerCase() == 'bloodshed')
+			{
+				FlxG.switchState(new CheaterState());
+			}
+			else
+			{
+				FlxG.switchState(new ChartingState());
+				FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN,handleInput);
+			}
 			#if windows
 			if (luaModchart != null)
 			{
