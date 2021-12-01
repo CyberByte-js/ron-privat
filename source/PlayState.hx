@@ -371,6 +371,14 @@ class PlayState extends MusicBeatState
 						atelophobiaCutsceneDone ? dialogue = CoolUtil.coolTextFile(Paths.txt('atelophobia/dialoge2')) : 
 						dialogue = CoolUtil.coolTextFile(Paths.txt('atelophobia/dialoge'));
 				}
+			case 'susshed':
+				{
+						dialogue = CoolUtil.coolTextFile(Paths.txt('susshed/sussybangla'));
+				}
+			case 'expurgation':
+				{
+						dialogue = CoolUtil.coolTextFile(Paths.txt('atelophobia/dialogueforcheaters'));
+				}
 		}
 		
 
@@ -1156,6 +1164,10 @@ class PlayState extends MusicBeatState
 				case 'file-manipulation':
 					schoolIntro(doof);
 				case 'atelophobia':
+					schoolIntro(doof);
+				case 'susshed':
+					schoolIntro(doof);
+				case 'expurgation':
 					schoolIntro(doof);
 				default:
 					startCountdown();
